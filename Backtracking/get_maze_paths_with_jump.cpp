@@ -60,7 +60,7 @@ vector<string> fun(int sx, int sy, int dx, int dy)
 
 		// recursive call the function for every possible diagnol step in a grid
 
-		for (int i = 1; i <= dx and i <= dy ; i++)
+		for (int i = 1; i <= dx - sx and i <= dy - sy ; i++)
 		{
 			vector<string> p2 = fun(sx + i, sy + i, dx, dy);
 			for (auto k : p2)
@@ -83,7 +83,7 @@ int main()
 	freopen("opt_output.txt", "w", stdout);
 #endif
 
-	vector<string> v = fun(0, 0, 3, 2);
+	vector<string> v = fun(0, 0, 2, 2);
 
 	for (auto i : v)
 		cout << i << " ";
