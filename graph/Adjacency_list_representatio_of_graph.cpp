@@ -59,7 +59,35 @@ public:
 			cout << endl;
 		}
 	}
+
+	void bfs(int source);
 };
+
+void graph:: bfs(int source)
+{
+	int visited[V] = {0};
+	queue<int>q;
+	q.push(source);
+	visited[source] = 1;
+
+	while (!q.empty())
+	{
+		int f = q.front();
+		q.pop();
+
+		cout << f << " ";
+		for (auto node : l[f])
+		{
+			if (visited[node] == 0)
+			{
+				visited[node] = 1;
+				q.push(node);
+			}
+		}
+	}
+
+
+}
 
 
 
@@ -84,7 +112,8 @@ int main()
 	g.add_edge(3, 4);
 	g.add_edge(4, 1);
 
-	g.display();
+	//g.display();
+	g.bfs(0);
 
 
 
