@@ -35,6 +35,17 @@ int main()
     freopen("opt_output.txt", "w", stdout);
 #endif
 
+    long int t;
+    cin >> t;
+    while (t--)
+    {
+        long int n;
+        cin >> n;
+        int n1 = n / 3;
+        int n2 = n - n1;
+        cout << n2 << " " << n1 << endl;
+    }
+
 
 
 }
