@@ -34,7 +34,7 @@ public:
 
 
         // more efficent iterative solution
-        // it is equivalent to count no of ways of dividing an array into two subsets such that             their difference is the given number or no of subset having sum = (diff+ arr_sum)/2 //
+        // it is equivalent to count no of ways of dividing an array into two subsets such that their difference is the given number or no of subsets count having sum = (diff+ arr_sum)/2 //
 
 //             if(nums.size()==1)
 //             {
